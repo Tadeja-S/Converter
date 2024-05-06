@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<form action="/convert" method="post">
+    <input type="text" placeholder="Enter kilometers" name="km">
+    <br><br>
+    <button type="submit">Convert</button>
+</form>
+
+{% endblock content %}
