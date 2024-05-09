@@ -3,9 +3,22 @@
 {% block content %}
 
 <form action="/convert" method="post">
-    <input type="text" placeholder="Enter kilometers" name="km">
+    <label class="instructions" for="unit">Choose unit to convert:</label>
     <br><br>
-    <button type="submit">Convert</button>
+    <select class="select" name="unit" id="unit">
+        <option value="km to miles">kilometers to miles</option>
+        <option value="miles to km">miles to kilometers</option>
+        <option value="C° to F°">Celsius to Farenheit</option>
+        <option value="F° to C°">Farenheit to Celsius</option>
+        <option value="EUR to USD">EUR to USD</option>
+        <option value="USD to EUR">USD to EUR</option>
+        <option value="kg to lbs">kilogrammes to pounds</option>
+        <option value="lbs to kg">pounds to kilogrammes</option>
+    </select>
+    <br><br>
+    <input class="input" type="text" placeholder="Enter number" name="number">
+    <br><br>
+    <button class="button" type="submit">Convert</button>
 </form>
 
 {% endblock content %}
